@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+main{
+    padding-top: 40px;
+}
+
 body{
     font-family: "Inter", sans-serif;
     background-color: var(--color-background);
@@ -99,6 +103,38 @@ body{
     transform: translateY(-3px);
 }
 
+.scroll-top{
+    position:fixed;
+    bottom: 30px;
+    right:30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-top.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover{
+    transform: translateY(-3px);
+}
+
 /* tecnologias */
 .technologies{
     display: flex;
@@ -119,7 +155,7 @@ body{
 /* responsive hero */
 @media (max-width: 768px){
     #hero{
-        padding: 60px 5%;
+        padding: 80px 5%;
     }
     .hero-content h1{
         font-size: 2.5rem;

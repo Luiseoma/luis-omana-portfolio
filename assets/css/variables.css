@@ -4,3 +4,7 @@
     --color-text: #1A1A1A;
     --color-white: #FFFFFF;
 }
+
+html{
+    scroll-behavior: smooth;
+}
