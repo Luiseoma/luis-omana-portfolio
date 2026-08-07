@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bot de impresión automática</title>
+
+    <link rel="stylesheet" href="../style/variables.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/project-detail.css">
+</head>
+<body>
+    <main class="project-detail">
+        <section class="project-header">
+            <h1>Bot de impresión automática</h1>
+            <p>
+                Automatización del procesio de impresión y gestión
+                de documentos PDF mediante Python.
+            </p>
+            <div class="project-tags">
+                <span>Python</span>
+                <span>Watchdog</span>
+                <span>PyWin32</span>
+                <span>Automation</span>
+            </div>
+        </section>
+        <section class="project-section">
+            <h2>Objetivo</h2>
+            <p>
+                Crear una solución capaz de detectar nuevos documentos,
+                enviarlos automáticamente a impresión y organizar los
+                archivos procesados.
+            </p>
+        </section>
+        <section class="project-section">
+            <h2>Tecnologías utilizadas</h2>
+            <ul>
+                <li>Python</li>
+                <li>Watchdog para monitoreo de archivos</li>
+                <li>PyWin32 para interacción con Windows</li>
+            </ul>
+        </section>
+        <section class="project-section">
+                
+            <h2>Código</h2>
+                
+            <div class="code-container">
+            
+                <div class="code-header">
+                    <span>bot_impresion.py</span>
+                </div>
+            
+                <pre>
+        <code>
+        from watchdog.observers import Observer
+        from watchdog.events import FileSystemEventHandler
+        
+        
+        class PDFHandler(FileSystemEventHandler):
+        
+            def on_created(self, event):
+        
+                if event.src_path.endswith(".pdf"):
+                    imprimir_pdf(event.src_path)
+        
+        </code>
+                </pre>
+            
+            </div>
+        
+        </section>
+    </main>
+</body>
